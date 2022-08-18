@@ -1,26 +1,36 @@
-// swift-tools-version: 5.6
-// The swift-tools-version declares the minimum version of Swift required to build this package.
+// swift-tools-version: 5.5
 
 import PackageDescription
 
 let package = Package(
     name: "localpackage",
+    platforms: [.iOS(.v15)],
     products: [
-        // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
             name: "localpackage",
             targets: ["localpackage"]),
     ],
     dependencies: [
-        // Dependencies declare other packages that this package depends on.
-        // .package(url: /* package url */, from: "1.0.0"),
+        .package(url: "https://github.com/Datadog/dd-sdk-ios", from: "1.0.0"),
+        .package(url: "https://github.com/ArtSabintsev/siren", from: "6.0.0"),
+        .package(url: "https://github.com/pointfreeco/swift-composable-architecture", from: "0.39.0"),
+        .package(url: "https://github.com/apple/swift-collections", from: "1.0.2"),
+        .package(url: "https://github.com/pointfreeco/swiftui-navigation", from: "0.2.0"),
+        .package(url: "https://github.com/AzureAD/microsoft-authentication-library-for-objc.git", from: "1.1.14"),
+        .package(url: "https://github.com/microsoft/appcenter-sdk-apple.git", from: "4.1.0"),
     ],
     targets: [
-        // Targets are the basic building blocks of a package. A target can define a module or a test suite.
-        // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
             name: "localpackage",
-            dependencies: []),
+            dependencies: [
+                .product(name: "DatadogStatic", package: "dd-sdk-ios"),
+                .product(name: "AppCenterAnalytics", package: "appcenter-sdk-apple"),
+                .product(name: "AppCenterCrashes", package: "appcenter-sdk-apple"),
+                .product(name: "MSAL", package: "microsoft-authentication-library-for-objc"),
+                .product(name: "Siren", package: "siren"),
+                .product(name: "ComposableArchitecture", package: "swift-composable-architecture"),
+                .product(name: "SwiftUINavigation", package: "swiftui-navigation"),
+            ]),
         .testTarget(
             name: "localpackageTests",
             dependencies: ["localpackage"]),
