@@ -18,6 +18,7 @@ let package = Package(
         .package(url: "https://github.com/pointfreeco/swiftui-navigation", from: "0.2.0"),
         .package(url: "https://github.com/AzureAD/microsoft-authentication-library-for-objc.git", from: "1.1.14"),
         .package(url: "https://github.com/microsoft/appcenter-sdk-apple.git", from: "4.1.0"),
+        .package(url: "https://github.com/datatheorem/TrustKit", from: "1.7.0"),
     ],
     targets: [
         .target(
@@ -30,6 +31,7 @@ let package = Package(
                 .product(name: "Siren", package: "siren"),
                 .product(name: "ComposableArchitecture", package: "swift-composable-architecture"),
                 .product(name: "SwiftUINavigation", package: "swiftui-navigation"),
+                .product(name: "TrustKit", package: "trustkit"),
             ]),
         .testTarget(
             name: "localpackageTests",
