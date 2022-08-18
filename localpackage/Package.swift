@@ -19,6 +19,7 @@ let package = Package(
         .package(url: "https://github.com/AzureAD/microsoft-authentication-library-for-objc.git", from: "1.1.14"),
         .package(url: "https://github.com/microsoft/appcenter-sdk-apple.git", from: "4.1.0"),
         .package(url: "https://github.com/datatheorem/TrustKit", from: "1.7.0"),
+        .package(url: "https://github.com/pointfreeco/swift-snapshot-testing", from: "1.8.1"),
     ],
     targets: [
         .target(
@@ -39,6 +40,9 @@ let package = Package(
         ),
         .testTarget(
             name: "localpackageTests",
-            dependencies: ["localpackage"]),
+            dependencies: [
+                "localpackage",
+                .product(name: "SnapshotTesting", package: "swift-snapshot-testing"),
+            ]),
     ]
 )
