@@ -20,6 +20,7 @@ let package = Package(
         .package(url: "https://github.com/microsoft/appcenter-sdk-apple.git", from: "4.1.0"),
         .package(url: "https://github.com/datatheorem/TrustKit", from: "1.7.0"),
         .package(url: "https://github.com/pointfreeco/swift-snapshot-testing", from: "1.8.1"),
+        .package(url: "https://github.com/twilio/twilio-voice-ios", from: "6.4.3"),
     ],
     targets: [
         .target(
@@ -33,6 +34,8 @@ let package = Package(
                 .product(name: "ComposableArchitecture", package: "swift-composable-architecture"),
                 .product(name: "SwiftUINavigation", package: "swiftui-navigation"),
                 .product(name: "TrustKit", package: "trustkit"),
+                .product(name: "TwilioVoice", package: "twilio-voice-ios"),
+                
             ],
             cSettings: [
                 .define("SWIFT_INSTALL_OBJC_HEADER", to: "NO")

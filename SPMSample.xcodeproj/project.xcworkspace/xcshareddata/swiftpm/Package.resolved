@@ -128,6 +128,15 @@
         }
       },
       {
+        "package": "TwilioVoice",
+        "repositoryURL": "https://github.com/twilio/twilio-voice-ios",
+        "state": {
+          "branch": null,
+          "revision": "f7406124b319d2dfdc401c6b80206e43679a6b6f",
+          "version": "6.4.3"
+        }
+      },
+      {
         "package": "xctest-dynamic-overlay",
         "repositoryURL": "https://github.com/pointfreeco/xctest-dynamic-overlay",
         "state": {
