@@ -32,7 +32,11 @@ let package = Package(
                 .product(name: "ComposableArchitecture", package: "swift-composable-architecture"),
                 .product(name: "SwiftUINavigation", package: "swiftui-navigation"),
                 .product(name: "TrustKit", package: "trustkit"),
-            ]),
+            ],
+            cSettings: [
+                .define("SWIFT_INSTALL_OBJC_HEADER", to: "NO")
+            ]
+        ),
         .testTarget(
             name: "localpackageTests",
             dependencies: ["localpackage"]),
