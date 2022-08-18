@@ -7,20 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B6ED206D28ADDF300066F8C3 /* localpackage in Frameworks */ = {isa = PBXBuildFile; productRef = B6ED206C28ADDF300066F8C3 /* localpackage */; };
 		B6FDB16428AD2578009309A6 /* SPMSampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FDB16328AD2578009309A6 /* SPMSampleApp.swift */; };
 		B6FDB16628AD2578009309A6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FDB16528AD2578009309A6 /* ContentView.swift */; };
 		B6FDB16828AD2579009309A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6FDB16728AD2579009309A6 /* Assets.xcassets */; };
 		B6FDB16B28AD2579009309A6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6FDB16A28AD2579009309A6 /* Preview Assets.xcassets */; };
-		B6FDB17328AD295C009309A6 /* MSAL in Frameworks */ = {isa = PBXBuildFile; productRef = B6FDB17228AD295C009309A6 /* MSAL */; };
-		B6FDB17628ADD144009309A6 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = B6FDB17528ADD144009309A6 /* ComposableArchitecture */; };
-		B6FDB17928ADD173009309A6 /* SwiftUINavigation in Frameworks */ = {isa = PBXBuildFile; productRef = B6FDB17828ADD173009309A6 /* SwiftUINavigation */; };
-		B6FDB17C28ADD19E009309A6 /* Siren in Frameworks */ = {isa = PBXBuildFile; productRef = B6FDB17B28ADD19E009309A6 /* Siren */; };
-		B6FDB17F28ADD250009309A6 /* AppCenterAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = B6FDB17E28ADD250009309A6 /* AppCenterAnalytics */; };
-		B6FDB18128ADD250009309A6 /* AppCenterCrashes in Frameworks */ = {isa = PBXBuildFile; productRef = B6FDB18028ADD250009309A6 /* AppCenterCrashes */; };
-		B6FDB18428ADD31A009309A6 /* DatadogStatic in Frameworks */ = {isa = PBXBuildFile; productRef = B6FDB18328ADD31A009309A6 /* DatadogStatic */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B6ED206A28ADDE800066F8C3 /* localpackage */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = localpackage; sourceTree = "<group>"; };
 		B6FDB16028AD2578009309A6 /* SPMSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SPMSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6FDB16328AD2578009309A6 /* SPMSampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPMSampleApp.swift; sourceTree = "<group>"; };
 		B6FDB16528AD2578009309A6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -33,24 +28,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B6FDB17628ADD144009309A6 /* ComposableArchitecture in Frameworks */,
-				B6FDB18128ADD250009309A6 /* AppCenterCrashes in Frameworks */,
-				B6FDB17328AD295C009309A6 /* MSAL in Frameworks */,
-				B6FDB17C28ADD19E009309A6 /* Siren in Frameworks */,
-				B6FDB17F28ADD250009309A6 /* AppCenterAnalytics in Frameworks */,
-				B6FDB17928ADD173009309A6 /* SwiftUINavigation in Frameworks */,
-				B6FDB18428ADD31A009309A6 /* DatadogStatic in Frameworks */,
+				B6ED206D28ADDF300066F8C3 /* localpackage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B6ED206B28ADDF300066F8C3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B6FDB15728AD2578009309A6 = {
 			isa = PBXGroup;
 			children = (
+				B6ED206A28ADDE800066F8C3 /* localpackage */,
 				B6FDB16228AD2578009309A6 /* SPMSample */,
 				B6FDB16128AD2578009309A6 /* Products */,
+				B6ED206B28ADDF300066F8C3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -98,13 +96,7 @@
 			);
 			name = SPMSample;
 			packageProductDependencies = (
-				B6FDB17228AD295C009309A6 /* MSAL */,
-				B6FDB17528ADD144009309A6 /* ComposableArchitecture */,
-				B6FDB17828ADD173009309A6 /* SwiftUINavigation */,
-				B6FDB17B28ADD19E009309A6 /* Siren */,
-				B6FDB17E28ADD250009309A6 /* AppCenterAnalytics */,
-				B6FDB18028ADD250009309A6 /* AppCenterCrashes */,
-				B6FDB18328ADD31A009309A6 /* DatadogStatic */,
+				B6ED206C28ADDF300066F8C3 /* localpackage */,
 			);
 			productName = SPMSample;
 			productReference = B6FDB16028AD2578009309A6 /* SPMSample.app */;
@@ -135,12 +127,6 @@
 			);
 			mainGroup = B6FDB15728AD2578009309A6;
 			packageReferences = (
-				B6FDB17128AD295C009309A6 /* XCRemoteSwiftPackageReference "microsoft-authentication-library-for-objc" */,
-				B6FDB17428ADD144009309A6 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
-				B6FDB17728ADD173009309A6 /* XCRemoteSwiftPackageReference "swiftui-navigation" */,
-				B6FDB17A28ADD19E009309A6 /* XCRemoteSwiftPackageReference "siren" */,
-				B6FDB17D28ADD250009309A6 /* XCRemoteSwiftPackageReference "appcenter-sdk-apple" */,
-				B6FDB18228ADD31A009309A6 /* XCRemoteSwiftPackageReference "dd-sdk-ios" */,
 			);
 			productRefGroup = B6FDB16128AD2578009309A6 /* Products */;
 			projectDirPath = "";
@@ -375,92 +361,10 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCRemoteSwiftPackageReference section */
-		B6FDB17128AD295C009309A6 /* XCRemoteSwiftPackageReference "microsoft-authentication-library-for-objc" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/AzureAD/microsoft-authentication-library-for-objc.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
-			};
-		};
-		B6FDB17428ADD144009309A6 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.9.0;
-			};
-		};
-		B6FDB17728ADD173009309A6 /* XCRemoteSwiftPackageReference "swiftui-navigation" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/pointfreeco/swiftui-navigation";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.2.0;
-			};
-		};
-		B6FDB17A28ADD19E009309A6 /* XCRemoteSwiftPackageReference "siren" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/ArtSabintsev/siren";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 6.0.0;
-			};
-		};
-		B6FDB17D28ADD250009309A6 /* XCRemoteSwiftPackageReference "appcenter-sdk-apple" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/microsoft/appcenter-sdk-apple.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 4.0.0;
-			};
-		};
-		B6FDB18228ADD31A009309A6 /* XCRemoteSwiftPackageReference "dd-sdk-ios" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Datadog/dd-sdk-ios";
-			requirement = {
-				branch = develop;
-				kind = branch;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
 /* Begin XCSwiftPackageProductDependency section */
-		B6FDB17228AD295C009309A6 /* MSAL */ = {
+		B6ED206C28ADDF300066F8C3 /* localpackage */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = B6FDB17128AD295C009309A6 /* XCRemoteSwiftPackageReference "microsoft-authentication-library-for-objc" */;
-			productName = MSAL;
-		};
-		B6FDB17528ADD144009309A6 /* ComposableArchitecture */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B6FDB17428ADD144009309A6 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
-			productName = ComposableArchitecture;
-		};
-		B6FDB17828ADD173009309A6 /* SwiftUINavigation */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B6FDB17728ADD173009309A6 /* XCRemoteSwiftPackageReference "swiftui-navigation" */;
-			productName = SwiftUINavigation;
-		};
-		B6FDB17B28ADD19E009309A6 /* Siren */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B6FDB17A28ADD19E009309A6 /* XCRemoteSwiftPackageReference "siren" */;
-			productName = Siren;
-		};
-		B6FDB17E28ADD250009309A6 /* AppCenterAnalytics */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B6FDB17D28ADD250009309A6 /* XCRemoteSwiftPackageReference "appcenter-sdk-apple" */;
-			productName = AppCenterAnalytics;
-		};
-		B6FDB18028ADD250009309A6 /* AppCenterCrashes */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B6FDB17D28ADD250009309A6 /* XCRemoteSwiftPackageReference "appcenter-sdk-apple" */;
-			productName = AppCenterCrashes;
-		};
-		B6FDB18328ADD31A009309A6 /* DatadogStatic */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B6FDB18228ADD31A009309A6 /* XCRemoteSwiftPackageReference "dd-sdk-ios" */;
-			productName = DatadogStatic;
+			productName = localpackage;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
