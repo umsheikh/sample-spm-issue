@@ -38,6 +38,7 @@ let package = Package(
                 
             ],
             cSettings: [
+                .define("DEBUG", .when(platforms: [.iOS, .macOS, .tvOS, .watchOS], configuration: .debug)),
                 .define("SWIFT_INSTALL_OBJC_HEADER", to: "NO")
             ]
         ),
