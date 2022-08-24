@@ -11,31 +11,33 @@ let package = Package(
             targets: ["localpackage"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/Datadog/dd-sdk-ios", from: "1.0.0"),
-        .package(url: "https://github.com/ArtSabintsev/siren", from: "6.0.0"),
-        .package(url: "https://github.com/pointfreeco/swift-composable-architecture", from: "0.39.0"),
-        .package(url: "https://github.com/apple/swift-collections", from: "1.0.2"),
-        .package(url: "https://github.com/pointfreeco/swiftui-navigation", from: "0.2.0"),
-        .package(url: "https://github.com/AzureAD/microsoft-authentication-library-for-objc.git", from: "1.1.14"),
-        .package(url: "https://github.com/microsoft/appcenter-sdk-apple.git", from: "4.1.0"),
-        .package(url: "https://github.com/datatheorem/TrustKit", from: "1.7.0"),
-        .package(url: "https://github.com/pointfreeco/swift-snapshot-testing", from: "1.8.1"),
-        .package(url: "https://github.com/twilio/twilio-voice-ios", from: "6.4.3"),
+        .package(url: "https://github.com/umsheikh/sample-package", branch: "main"),
+//        .package(url: "https://github.com/Datadog/dd-sdk-ios", from: "1.0.0"),
+//        .package(url: "https://github.com/ArtSabintsev/siren", from: "6.0.0"),
+//        .package(url: "https://github.com/pointfreeco/swift-composable-architecture", from: "0.39.0"),
+//        .package(url: "https://github.com/apple/swift-collections", from: "1.0.2"),
+//        .package(url: "https://github.com/pointfreeco/swiftui-navigation", from: "0.2.0"),
+//        .package(url: "https://github.com/AzureAD/microsoft-authentication-library-for-objc.git", from: "1.1.14"),
+//        .package(url: "https://github.com/microsoft/appcenter-sdk-apple.git", from: "4.1.0"),
+//        .package(url: "https://github.com/datatheorem/TrustKit", from: "1.7.0"),
+//        .package(url: "https://github.com/pointfreeco/swift-snapshot-testing", from: "1.8.1"),
+//        .package(url: "https://github.com/twilio/twilio-voice-ios", from: "6.4.3"),
     ],
     targets: [
         .target(
             name: "localpackage",
             dependencies: [
-                .product(name: "DatadogStatic", package: "dd-sdk-ios"),
-                .product(name: "AppCenterAnalytics", package: "appcenter-sdk-apple"),
-                .product(name: "AppCenterCrashes", package: "appcenter-sdk-apple"),
-                .product(name: "MSAL", package: "microsoft-authentication-library-for-objc"),
-                .product(name: "Siren", package: "siren"),
-                .product(name: "ComposableArchitecture", package: "swift-composable-architecture"),
-                .product(name: "SwiftUINavigation", package: "swiftui-navigation"),
-                .product(name: "TrustKit", package: "trustkit"),
-                .product(name: "TwilioVoice", package: "twilio-voice-ios"),
-                
+                .product(name: "sample-package", package: "sample-package"),
+//                .product(name: "DatadogStatic", package: "dd-sdk-ios"),
+//                .product(name: "AppCenterAnalytics", package: "appcenter-sdk-apple"),
+//                .product(name: "AppCenterCrashes", package: "appcenter-sdk-apple"),
+//                .product(name: "MSAL", package: "microsoft-authentication-library-for-objc"),
+//                .product(name: "Siren", package: "siren"),
+//                .product(name: "ComposableArchitecture", package: "swift-composable-architecture"),
+//                .product(name: "SwiftUINavigation", package: "swiftui-navigation"),
+//                .product(name: "TrustKit", package: "trustkit"),
+//                .product(name: "TwilioVoice", package: "twilio-voice-ios"),
+//
             ],
             cSettings: [
                 .define("DEBUG", .when(platforms: [.iOS, .macOS, .tvOS, .watchOS], configuration: .debug)),
@@ -46,7 +48,7 @@ let package = Package(
             name: "localpackageTests",
             dependencies: [
                 "localpackage",
-                .product(name: "SnapshotTesting", package: "swift-snapshot-testing"),
+//                .product(name: "SnapshotTesting", package: "swift-snapshot-testing"),
             ]),
     ]
 )
